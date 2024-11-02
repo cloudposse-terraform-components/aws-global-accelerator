@@ -1,70 +1,67 @@
-name: "template"
-
+name: "aws-global-accelerator"
 # Canonical GitHub repo
-github_repo: "cloudposse-terraform-components/template"
-
+github_repo: "cloudposse-terraform-components/aws-global-accelerator"
 # Short description of this project
 description: |-
-  Description of this component
+  This component is responsible for provisioning AWS Global Accelerator and its listeners.
 
-usage: |-
-  **Stack Level**: Regional or Test47
+  ## Usage
 
-  Here's an example snippet for how to use this component.
-  
+  **Stack Level**: Global
+
+  Here are some example snippets for how to use this component:
+
   ```yaml
-  components:
-    terraform:
-      foo:
-        vars:
-          enabled: true
+  global-accelerator:
+    vars:
+      enabled: true
+      flow_logs_enabled: true
+      flow_logs_s3_bucket: examplecorp-ue1-devplatform-global-accelerator-flow-logs
+      flow_logs_s3_prefix: logs/
+      listeners:
+        - client_affinity: NONE
+          protocol: TCP
+          port_ranges:
+            - from_port: 80
+              to_port: 80
+            - from_port: 443
+              to_port: 443
   ```
 
+  <!-- prettier-ignore-start -->
+
+  <!-- prettier-ignore-end -->
+
+  ## References
+
+  - [cloudposse/terraform-aws-components](https://github.com/cloudposse/terraform-aws-components/tree/main/modules/global-accelerator) -
+    Cloud Posse's upstream component
 include:
   - "docs/terraform.md"
-
 tags:
-  - terraform
-  - terraform-modules
-  - aws
-  - components
-  - terraform-components
-  - root
-  - geodesic
-  - reference-implementation
-  - reference-architecture
-
+  - component/global-accelerator
+  - layer/unassigned
+  - provider/aws
 # Categories of this project
 categories:
-  - terraform-modules/root
-  - terraform-components
-
+  - component/global-accelerator
+  - layer/unassigned
+  - provider/aws
 # License of this project
 license: "APACHE2"
-
 # Badges to display
 badges:
-  - name: "Latest Release"
-    image: "https://img.shields.io/github/release/cloudposse-terraform-components/template.svg?style=for-the-badge"
-    url: "https://github.com/cloudposse-terraform-components/template/releases/latest"
-  - name: "Slack Community"
-    image: "https://slack.cloudposse.com/for-the-badge.svg"
-    url: "https://slack.cloudposse.com"
-
-references:
-  - name: "Cloud Posse Documentation"
-    description: "Complete documentation for the Cloud Posse solution"
-    url: "https://docs.cloudposse.com"
-  - name: "Reference Architectures"
-    description: "Launch effortlessly with our turnkey reference architectures, built either by your team or ours."
-    url: "https://cloudposse.com/"
-
+  - name: Latest Release
+    image: https://img.shields.io/github/release/cloudposse-terraform-components/aws-global-accelerator.svg?style=for-the-badge
+    url: https://github.com/cloudposse-terraform-components/aws-global-accelerator/releases/latest
+  - name: Slack Community
+    image: https://slack.cloudposse.com/for-the-badge.svg
+    url: https://slack.cloudposse.com
 related:
-- name: "Cloud Posse Terraform Modules"
-  description: Our collection of reusable Terraform modules used by our reference architectures.
-  url: "https://docs.cloudposse.com/modules/"
-- name: "Atmos"
-  description: "Atmos is like docker-compose but for your infrastructure"
-  url: "https://atmos.tools"
-
+  - name: "Cloud Posse Terraform Modules"
+    description: Our collection of reusable Terraform modules used by our reference architectures.
+    url: "https://docs.cloudposse.com/modules/"
+  - name: "Atmos"
+    description: "Atmos is like docker-compose but for your infrastructure"
+    url: "https://atmos.tools"
 contributors: [] # If included generates contribs
