@@ -5,7 +5,7 @@ tags:
   - provider/aws
 ---
 
-# Component: `global`
+# Component: `global-accelerator`
 
 This component is responsible for provisioning AWS Global Accelerator and its listeners.
 
