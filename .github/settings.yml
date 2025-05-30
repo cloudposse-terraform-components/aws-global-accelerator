@@ -5,3 +5,4 @@ repository:
   description: This component is responsible for provisioning AWS Global Accelerator and its listeners
   homepage: https://cloudposse.com/accelerate
   topics: terraform, terraform-component
+
