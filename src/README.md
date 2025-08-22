@@ -7,8 +7,7 @@ tags:
 
 # Component: `global-accelerator`
 
-This component is responsible for provisioning AWS Global Accelerator and its listeners.
-
+This component provisions AWS Global Accelerator and its listeners.
 ## Usage
 
 **Stack Level**: Global
@@ -33,7 +32,10 @@ global-accelerator:
 ```
 
 <!-- prettier-ignore-start -->
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- prettier-ignore-end -->
+
+
+<!-- markdownlint-disable -->
 ## Requirements
 
 | Name | Version |
@@ -97,12 +99,17 @@ No resources.
 | <a name="output_listener_ids"></a> [listener\_ids](#output\_listener\_ids) | Global Accelerator Listener IDs. |
 | <a name="output_name"></a> [name](#output\_name) | Name of the Global Accelerator. |
 | <a name="output_static_ips"></a> [static\_ips](#output\_static\_ips) | Global Static IPs owned by the Global Accelerator. |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-<!-- prettier-ignore-end -->
+<!-- markdownlint-restore -->
+
+
 
 ## References
 
-- [cloudposse/terraform-aws-components](https://github.com/cloudposse/terraform-aws-components/tree/main/modules/global-accelerator) -
-  Cloud Posse's upstream component
+
+- [cloudposse-terraform-components](https://github.com/orgs/cloudposse-terraform-components/repositories) - Cloud Posse's upstream component
+
+
+
 
 [<img src="https://cloudposse.com/logo-300x69.svg" height="32" align="right"/>](https://cpco.io/homepage?utm_source=github&utm_medium=readme&utm_campaign=cloudposse-terraform-components/aws-global-accelerator&utm_content=)
+
