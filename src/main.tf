@@ -4,7 +4,7 @@ locals {
 
 module "global_accelerator" {
   source  = "cloudposse/global-accelerator/aws"
-  version = "0.6.0"
+  version = "0.6.1"
 
   flow_logs_enabled   = var.flow_logs_enabled
   flow_logs_s3_prefix = var.flow_logs_s3_prefix
